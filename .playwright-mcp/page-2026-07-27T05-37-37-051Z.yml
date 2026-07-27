@@ -1,0 +1,22 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e4]:
+    - heading "PULSED" [level=1] [ref=f4e5]
+    - paragraph [ref=f4e6]: Your music becomes the track
+  - generic [ref=f4e8]:
+    - generic [ref=f4e9]: ♫
+    - paragraph [ref=f4e10]: Drop an audio file anywhere
+    - paragraph [ref=f4e11]:
+      - text: or
+      - button "browse your files" [ref=f4e12] [cursor=pointer]
+    - paragraph [ref=f4e13]: mp3 · wav · ogg · flac · m4a
+  - generic [ref=f4e14]:
+    - generic [ref=f4e15]: Difficulty
+    - generic [ref=f4e16]:
+      - button "Easy" [ref=f4e17] [cursor=pointer]
+      - button "Normal" [ref=f4e18] [cursor=pointer]
+      - button "Hard" [ref=f4e19] [cursor=pointer]
+    - paragraph [ref=f4e20]: 3 lanes · sparse notes · few hazards
+  - generic [ref=f4e21]:
+    - button "Try demo track" [ref=f4e22] [cursor=pointer]
+    - button "Graphics" [ref=f4e23] [cursor=pointer]
+    - generic [ref=f4e24]: ← → or A D to steer

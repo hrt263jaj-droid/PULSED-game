@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/PULSED-game/',
+  base: '/PULSED-game/dist/',
   build: {
     rollupOptions: {
       output: {
