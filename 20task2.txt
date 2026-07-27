@@ -18,11 +18,11 @@ chrome-devtools-mcp - navigate_page (MCP)を使う。
 
 https://github.com/hrt263jaj-droid/PULSED-game/を開く。
 
-https://github.com/hrt263jaj-droid/PULSED-game/に変更したdist/index.htmlのゲームを公開する。
+https://github.com/hrt263jaj-droid/PULSED-game/の全てのファイルを削除してからdistフォルダだけを公開する。
 
 https://github.com/hrt263jaj-droid/PULSED-game/にdist/index.htmlのゲームが動作する最低限のファイルだけを公開する。
 
-https://github.com/hrt263jaj-droid/PULSED-game/のゲームをhttps://hrt263jaj-droid.github.io/PULSED-game/dist/に公開する。
+https://github.com/hrt263jaj-droid/PULSED-game/のゲームをhttps://hrt263jaj-droid.github.io/PULSED-game/に公開する。
 
 https://hrt263jaj-droid.github.io/PULSED-game/dist/のゲームを「TRY─DEMO─TRACK」をクリックして動作確認する。
 

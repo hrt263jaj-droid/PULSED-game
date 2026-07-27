@@ -843,25 +843,29 @@ class Game {
     let bestScore = -Infinity
     let foundTarget = false
 
-    for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 15; i++) {
+    // Track multiple upcoming items for path planning
+    const upcomingTargets = []
+    for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 20; i++) {
       const item = items[i]
       if (item.resolved) continue
       if (item.t > lookAheadTime) break
 
-      // Calculate score for this target: prioritize collectibles, avoid hazards
-      // Score based on strength and proximity to current position
       const timeUntil = item.t - songTime
       const distance = Math.abs(run.vessel.offset - item.offset)
-      const urgency = 1 / Math.max(0.1, timeUntil)
+      const urgency = 1 / Math.max(0.05, timeUntil)
 
       let score = 0
       if (item.hazard) {
         // Avoid hazards - negative score based on how close we are to hitting them
-        score = -urgency * 10 * (1 - distance / (limit * 2))
+        // Higher penalty if we're close to the hazard's lane
+        score = -urgency * 15 * (1 - distance / (limit * 1.5))
       } else {
         // Collect collectibles - positive score based on strength and urgency
-        score = item.strength * urgency * (1 + (1 - distance / limit))
+        // Prioritize stronger notes and closer items
+        score = item.strength * urgency * 2 * (1 + (1 - distance / limit))
       }
+
+      upcomingTargets.push({ item, score, timeUntil, distance, offset: item.offset })
 
       if (score > bestScore) {
         bestScore = score
@@ -872,14 +876,14 @@ class Game {
 
     // If no immediate targets, look further ahead for upcoming collectibles
     if (!foundTarget) {
-      for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 30; i++) {
+      for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 40; i++) {
         const item = items[i]
         if (item.resolved || item.hazard) continue
-        if (item.t > songTime + this.autoPlayLookAhead * 3) break
+        if (item.t > songTime + this.autoPlayLookAhead * 4) break
 
         const timeUntil = item.t - songTime
         const distance = Math.abs(run.vessel.offset - item.offset)
-        const score = item.strength / Math.max(0.1, timeUntil) * (1 - distance / limit * 0.5)
+        const score = item.strength / Math.max(0.05, timeUntil) * (1 - distance / limit * 0.3)
 
         if (score > bestScore) {
           bestScore = score
@@ -894,16 +898,59 @@ class Game {
       bestTarget = 0
     }
 
-    // Smoothly interpolate towards target
+    // Predictive steering: anticipate where we need to be for the NEXT note
+    // by looking at the sequence of upcoming items
+    if (upcomingTargets.length >= 2) {
+      // Sort by time
+      upcomingTargets.sort((a, b) => a.timeUntil - b.timeUntil)
+
+      // Check if we need to start moving early for a note that comes after the current target
+      for (let i = 0; i < Math.min(3, upcomingTargets.length - 1); i++) {
+        const current = upcomingTargets[i]
+        const next = upcomingTargets[i + 1]
+        if (current.item.hazard || next.item.hazard) continue
+
+        // If we're currently moving toward current, but next is in opposite direction,
+        // start moving toward next early
+        const currentDir = Math.sign(current.offset - run.vessel.offset)
+        const nextDir = Math.sign(next.offset - run.vessel.offset)
+
+        if (currentDir !== 0 && nextDir !== 0 && currentDir !== nextDir) {
+          // Need to change direction - bias toward the next target earlier
+          const transitionUrgency = 1 / Math.max(0.1, next.timeUntil)
+          bestTarget = THREE.MathUtils.lerp(current.offset, next.offset, 0.3 * transitionUrgency)
+          break
+        }
+      }
+    }
+
+    // Smoothly interpolate towards target with adaptive smoothing
+    // Faster response for urgent notes, smoother for distant ones
+    const adaptiveSmooth = foundTarget ? this.autoPlaySmooth : this.autoPlaySmooth * 0.5
     const targetDiff = bestTarget - run.vessel.offset
-    this.autoPlayTargetOffset += (targetDiff - this.autoPlayTargetOffset) * this.autoPlaySmooth
+    this.autoPlayTargetOffset += (targetDiff - this.autoPlayTargetOffset) * adaptiveSmooth
 
     // Apply steering using moveBy (direct position control like mouse)
-    const maxStep = limit * 2 * dt // max units per frame
+    const maxStep = limit * 3 * dt // max units per frame
     const clampedStep = THREE.MathUtils.clamp(this.autoPlayTargetOffset, -maxStep, maxStep)
 
-    if (Math.abs(clampedStep) > 0.01) {
+    if (Math.abs(clampedStep) > 0.005) {
       run.vessel.moveBy(clampedStep, dt, limit)
+    }
+
+    // Auto-trigger overdrive when it's ready and we have a good opportunity
+    if (run.scoring.overdrive >= 1 && !run.scoring.overdriveActive) {
+      // Check if there are many collectibles coming up soon
+      let upcomingCollectibles = 0
+      for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 10; i++) {
+        const item = items[i]
+        if (item.resolved || item.hazard) continue
+        if (item.t - songTime < 3.0) upcomingCollectibles++
+      }
+      // Trigger overdrive if we have a cluster of notes coming
+      if (upcomingCollectibles >= 3) {
+        this._tryOverdrive()
+      }
     }
   }
 
