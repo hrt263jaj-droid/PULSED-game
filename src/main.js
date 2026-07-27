@@ -29,6 +29,8 @@ import {
   saveDifficulty,
   loadSkipIntro,
   saveSkipIntro,
+  loadAutoPlay,
+  saveAutoPlay,
 } from './fx/quality.js'
 
 const CAMERA_LAG = 0.30 // seconds of track behind the vessel
@@ -70,8 +72,7 @@ class Game {
     this.shakeEnabled = true
     this.difficultyName = loadDifficulty()
     this.skipIntro = loadSkipIntro()
-
-    this.state = 'title'
+    this.autoPlay = loadAutoPlay()
     this.run = null
     this.frame = makeFrame()
     this.camFrame = makeFrame()
@@ -173,6 +174,7 @@ class Game {
       },
       onAutoPlayToggle: (v) => {
         this.autoPlay = v
+        saveAutoPlay(v)
       },
     })
     this.ui.setSelectedTier(this.tierName)

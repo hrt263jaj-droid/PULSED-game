@@ -157,3 +157,23 @@ export function saveSkipIntro(value) {
     // Non-fatal.
   }
 }
+
+const AUTOPLAY_KEY = 'pulsedrive.autoplay'
+
+export function loadAutoPlay() {
+  try {
+    const saved = localStorage.getItem(AUTOPLAY_KEY)
+    if (saved === 'true' || saved === 'false') return saved === 'true'
+  } catch {
+    // Fall through to default.
+  }
+  return true // Default: auto-play enabled (spectator mode)
+}
+
+export function saveAutoPlay(value) {
+  try {
+    localStorage.setItem(AUTOPLAY_KEY, String(value))
+  } catch {
+    // Non-fatal: the setting just won't persist.
+  }
+}
