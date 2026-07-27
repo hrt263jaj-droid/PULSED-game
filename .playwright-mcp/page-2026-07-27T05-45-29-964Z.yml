@@ -1,0 +1,721 @@
+- generic [ref=f13e2]:
+  - generic [ref=f13e3]:
+    - link "Skip to content" [ref=f13e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f13e8]:
+      - generic [ref=f13e9]:
+        - generic [ref=f13e10]:
+          - button "Open menu" [ref=f13e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f13e15] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f13e18]:
+          - navigation "Breadcrumbs" [ref=f13e19]:
+            - list [ref=f13e20]:
+              - listitem [ref=f13e21]:
+                - link "hrt263jaj-droid" [ref=f13e22] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid
+              - listitem [ref=f13e24]:
+                - link "PULSED-game" [ref=f13e25] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game
+                - button "Switch repository (alt shift r)" [ref=f13e26] [cursor=pointer]
+          - button "Search or jump to…" [ref=f13e31] [cursor=pointer]:
+            - generic [ref=f13e33]:
+              - generic:
+                - text: Type
+                - generic: /
+                - text: to search
+        - generic [ref=f13e34]:
+          - generic [ref=f13e35]:
+            - generic [ref=f13e38]:
+              - link "Chat with Copilot" [ref=f13e40] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f13e45] [cursor=pointer]
+            - button "Create new..." [ref=f13e47] [cursor=pointer]
+            - generic [ref=f13e49]:
+              - link "All issues" [ref=f13e50] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests" [ref=f13e54] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f13e57] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f13e60] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f13e64] [cursor=pointer]:
+            - img "User avatar" [ref=f13e65]
+      - heading "Repository navigation" [level=2] [ref=f13e66]
+      - navigation "Repository" [ref=f13e67]:
+        - list [ref=f13e68]:
+          - listitem [ref=f13e69]:
+            - link "Code" [ref=f13e70] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game
+          - listitem [ref=f13e72]:
+            - link "Issues" [ref=f13e73] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/issues
+          - listitem [ref=f13e75]:
+            - link "Pull requests" [ref=f13e76] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/pulls
+          - listitem [ref=f13e78]:
+            - link "Actions" [ref=f13e79] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/actions
+          - listitem [ref=f13e81]:
+            - link "Projects" [ref=f13e82] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/projects
+          - listitem [ref=f13e84]:
+            - link "Wiki" [ref=f13e85] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/wiki
+          - listitem [ref=f13e87]:
+            - link "Security and quality (1)" [ref=f13e88] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/security
+              - generic [ref=f13e89]: Security and quality
+              - generic [ref=f13e90]:
+                - generic [ref=f13e91]: "1"
+                - generic [ref=f13e92]: (1)
+          - listitem [ref=f13e93]:
+            - link "Insights" [ref=f13e94] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/pulse
+          - listitem [ref=f13e96]:
+            - link "Settings" [ref=f13e97] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/settings
+  - main [ref=f13e102]:
+    - generic [ref=f13e104]:
+      - 'heading "Actions: hrt263jaj-droid/PULSED-game" [level=1] [ref=f13e105]'
+      - generic [ref=f13e108]:
+        - generic [ref=f13e109]:
+          - generic [ref=f13e110]:
+            - heading "Actions" [level=2] [ref=f13e111]
+            - link "New workflow" [ref=f13e112] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/actions/new
+          - navigation "Actions Workflows" [ref=f13e118]:
+            - list [ref=f13e120]:
+              - listitem [ref=f13e121]:
+                - link "All workflows" [ref=f13e122] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/actions
+              - listitem [ref=f13e124]
+              - listitem [ref=f13e125]:
+                - list "Workflows" [ref=f13e129]:
+                  - listitem [ref=f13e130]:
+                    - link "Deploy to GitHub Pages" [ref=f13e131] [cursor=pointer]:
+                      - /url: /hrt263jaj-droid/PULSED-game/actions/workflows/deploy.yml
+                    - button "Pin Deploy to GitHub Pages" [ref=f13e133] [cursor=pointer]
+                  - listitem [ref=f13e134]:
+                    - link "pages-build-deployment" [ref=f13e135] [cursor=pointer]:
+                      - /url: /hrt263jaj-droid/PULSED-game/actions/workflows/pages/pages-build-deployment
+                    - button "Pin pages-build-deployment" [ref=f13e137] [cursor=pointer]
+              - listitem [ref=f13e138]
+              - listitem [ref=f13e139]:
+                - generic [ref=f13e142]:
+                  - heading "Management" [level=3] [ref=f13e144]
+                  - list "Management" [ref=f13e145]:
+                    - listitem [ref=f13e146]:
+                      - link "Caches" [ref=f13e147] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/actions/caches
+                    - listitem [ref=f13e149]:
+                      - link "Deployments" [ref=f13e150] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/deployments
+                    - listitem [ref=f13e152]:
+                      - link "Attestations" [ref=f13e153] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/attestations
+                    - listitem [ref=f13e155]:
+                      - link "Runners" [ref=f13e156] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/actions/runners
+                    - listitem [ref=f13e158]:
+                      - link "Usage metrics" [ref=f13e159] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/actions/metrics/usage
+                    - listitem [ref=f13e161]:
+                      - link "Performance metrics" [ref=f13e162] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/actions/metrics/performance
+        - generic [ref=f13e166]:
+          - generic [ref=f13e167]:
+            - generic [ref=f13e168]:
+              - heading "All workflows" [level=2] [ref=f13e170]
+              - search [ref=f13e176]:
+                - combobox "Filter workflow runs" [ref=f13e177]
+            - generic [ref=f13e178]: Showing runs from all workflows
+          - generic [ref=f13e179]:
+            - generic [ref=f13e180]:
+              - strong [ref=f13e183]: 33 workflow runs
+              - generic [ref=f13e184]:
+                - button "Workflow" [ref=f13e188] [cursor=pointer]
+                - button "Event" [ref=f13e194] [cursor=pointer]
+                - button "Status" [ref=f13e200] [cursor=pointer]
+                - button "Branch" [ref=f13e206] [cursor=pointer]
+                - button "Actor" [ref=f13e212] [cursor=pointer]
+            - generic [ref=f13e215]:
+              - generic [ref=f13e217]:
+                - generic [ref=f13e218]:
+                  - 'link "completed successfully: Run 7 of Deploy to GitHub Pages. Fix deployment: use /PULSED-game/ base path and deploy from dist folder" [ref=f13e219] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240604890
+                    - img "completed successfully:" [ref=f13e221]
+                    - generic [ref=f13e223]: "Fix deployment: use /PULSED-game/ base path and deploy from dist folder"
+                  - generic [ref=f13e224]:
+                    - text: "Deploy to GitHub Pages #7:"
+                    - generic [ref=f13e225]:
+                      - text: Commit
+                      - link "9de3466" [ref=f13e226] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/9de3466da84f26d757fe071aa037f9eb42b79c2b
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e227] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e229] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e231]:
+                  - generic [ref=f13e232]:
+                    - generic "Jul 27, 2026, 14:44 GMT+9" [ref=f13e237]: 1 minute ago
+                    - generic [ref=f13e238]:
+                      - img "Run duration" [ref=f13e239]
+                      - text: 46s
+                  - group [ref=f13e242]:
+                    - img "Show options" [ref=f13e244] [cursor=pointer]
+              - generic [ref=f13e247]:
+                - generic [ref=f13e248]:
+                  - 'link "queued: Run 26 of pages-build-deployment. pages build and deployment" [ref=f13e249] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240604436
+                    - img "queued:" [ref=f13e251]
+                    - generic [ref=f13e253]: pages build and deployment
+                  - generic [ref=f13e254]:
+                    - text: "pages-build-deployment #26:"
+                    - generic [ref=f13e255]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e256] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e258] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e260]:
+                  - generic [ref=f13e261]:
+                    - generic "Jul 27, 2026, 14:44 GMT+9" [ref=f13e266]: 1 minute ago
+                    - generic [ref=f13e267]: Queued
+                  - group [ref=f13e271]:
+                    - img "Show options" [ref=f13e273] [cursor=pointer]
+              - generic [ref=f13e276]:
+                - generic [ref=f13e277]:
+                  - 'link "completed successfully: Run 6 of Deploy to GitHub Pages. Rebuild with correct base path for dist deployment" [ref=f13e278] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240492827
+                    - img "completed successfully:" [ref=f13e280]
+                    - generic [ref=f13e282]: Rebuild with correct base path for dist deployment
+                  - generic [ref=f13e283]:
+                    - text: "Deploy to GitHub Pages #6:"
+                    - generic [ref=f13e284]:
+                      - text: Commit
+                      - link "abff4f9" [ref=f13e285] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/abff4f9563c5e68fe1ce7339ce78d6f91aba6128
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e286] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e288] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e290]:
+                  - generic [ref=f13e291]:
+                    - generic "Jul 27, 2026, 14:42 GMT+9" [ref=f13e296]: 3 minutes ago
+                    - generic [ref=f13e297]:
+                      - img "Run duration" [ref=f13e298]
+                      - text: 31s
+                  - group [ref=f13e301]:
+                    - img "Show options" [ref=f13e303] [cursor=pointer]
+              - generic [ref=f13e306]:
+                - generic [ref=f13e307]:
+                  - 'link "completed successfully: Run 25 of pages-build-deployment. pages build and deployment" [ref=f13e308] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240492462
+                    - img "completed successfully:" [ref=f13e310]
+                    - generic [ref=f13e312]: pages build and deployment
+                  - generic [ref=f13e313]:
+                    - text: "pages-build-deployment #25:"
+                    - generic [ref=f13e314]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e315] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e317] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e319]:
+                  - generic [ref=f13e320]:
+                    - generic "Jul 27, 2026, 14:42 GMT+9" [ref=f13e325]: 3 minutes ago
+                    - generic [ref=f13e326]:
+                      - img "Run duration" [ref=f13e327]
+                      - text: 37s
+                  - group [ref=f13e330]:
+                    - img "Show options" [ref=f13e332] [cursor=pointer]
+              - generic [ref=f13e335]:
+                - generic [ref=f13e336]:
+                  - 'link "completed successfully: Run 5 of Deploy to GitHub Pages. Fix vite config base path for dist deployment" [ref=f13e337] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240337140
+                    - img "completed successfully:" [ref=f13e339]
+                    - generic [ref=f13e341]: Fix vite config base path for dist deployment
+                  - generic [ref=f13e342]:
+                    - text: "Deploy to GitHub Pages #5:"
+                    - generic [ref=f13e343]:
+                      - text: Commit
+                      - link "a73f6cd" [ref=f13e344] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/a73f6cd6740042acd26bc49e74785f3a6ddfce76
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e345] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e347] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e349]:
+                  - generic [ref=f13e350]:
+                    - generic "Jul 27, 2026, 14:38 GMT+9" [ref=f13e355]: 6 minutes ago
+                    - generic [ref=f13e356]:
+                      - img "Run duration" [ref=f13e357]
+                      - text: 31s
+                  - group [ref=f13e360]:
+                    - img "Show options" [ref=f13e362] [cursor=pointer]
+              - generic [ref=f13e365]:
+                - generic [ref=f13e366]:
+                  - 'link "completed successfully: Run 24 of pages-build-deployment. pages build and deployment" [ref=f13e367] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240336859
+                    - img "completed successfully:" [ref=f13e369]
+                    - generic [ref=f13e371]: pages build and deployment
+                  - generic [ref=f13e372]:
+                    - text: "pages-build-deployment #24:"
+                    - generic [ref=f13e373]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e374] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e376] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e378]:
+                  - generic [ref=f13e379]:
+                    - generic "Jul 27, 2026, 14:38 GMT+9" [ref=f13e384]: 6 minutes ago
+                    - generic [ref=f13e385]:
+                      - img "Run duration" [ref=f13e386]
+                      - text: 43s
+                  - group [ref=f13e389]:
+                    - img "Show options" [ref=f13e391] [cursor=pointer]
+              - generic [ref=f13e394]:
+                - generic [ref=f13e395]:
+                  - 'link "completed successfully: Run 4 of Deploy to GitHub Pages. Fix base href for dist deployment and rebuild" [ref=f13e396] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240228546
+                    - img "completed successfully:" [ref=f13e398]
+                    - generic [ref=f13e400]: Fix base href for dist deployment and rebuild
+                  - generic [ref=f13e401]:
+                    - text: "Deploy to GitHub Pages #4:"
+                    - generic [ref=f13e402]:
+                      - text: Commit
+                      - link "def96db" [ref=f13e403] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/def96db75b1dfea71c095984aafbf51e9f4cc23c
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e404] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e406] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e408]:
+                  - generic [ref=f13e409]:
+                    - generic "Jul 27, 2026, 14:36 GMT+9" [ref=f13e414]: 9 minutes ago
+                    - generic [ref=f13e415]:
+                      - img "Run duration" [ref=f13e416]
+                      - text: 44s
+                  - group [ref=f13e419]:
+                    - img "Show options" [ref=f13e421] [cursor=pointer]
+              - generic [ref=f13e424]:
+                - generic [ref=f13e425]:
+                  - 'link "completed successfully: Run 23 of pages-build-deployment. pages build and deployment" [ref=f13e426] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240228400
+                    - img "completed successfully:" [ref=f13e428]
+                    - generic [ref=f13e430]: pages build and deployment
+                  - generic [ref=f13e431]:
+                    - text: "pages-build-deployment #23:"
+                    - generic [ref=f13e432]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e433] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e435] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e437]:
+                  - generic [ref=f13e438]:
+                    - generic "Jul 27, 2026, 14:36 GMT+9" [ref=f13e443]: 9 minutes ago
+                    - generic [ref=f13e444]:
+                      - img "Run duration" [ref=f13e445]
+                      - text: 41s
+                  - group [ref=f13e448]:
+                    - img "Show options" [ref=f13e450] [cursor=pointer]
+              - generic [ref=f13e453]:
+                - generic [ref=f13e454]:
+                  - 'link "completed successfully: Run 3 of Deploy to GitHub Pages. Fix base href for GitHub Pages deployment at /dist/" [ref=f13e455] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240134496
+                    - img "completed successfully:" [ref=f13e457]
+                    - generic [ref=f13e459]: Fix base href for GitHub Pages deployment at /dist/
+                  - generic [ref=f13e460]:
+                    - text: "Deploy to GitHub Pages #3:"
+                    - generic [ref=f13e461]:
+                      - text: Commit
+                      - link "56e648a" [ref=f13e462] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/56e648a4b774ee566d8b044c3829b2bb4ecd0060
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e463] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e465] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e467]:
+                  - generic [ref=f13e468]:
+                    - generic "Jul 27, 2026, 14:34 GMT+9" [ref=f13e473]: 10 minutes ago
+                    - generic [ref=f13e474]:
+                      - img "Run duration" [ref=f13e475]
+                      - text: 2m 10s
+                  - group [ref=f13e478]:
+                    - img "Show options" [ref=f13e480] [cursor=pointer]
+              - generic [ref=f13e483]:
+                - generic [ref=f13e484]:
+                  - 'link "cancelled: Run 22 of pages-build-deployment. pages build and deployment" [ref=f13e485] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30240133962
+                    - img "cancelled:" [ref=f13e487]
+                    - generic [ref=f13e489]: pages build and deployment
+                  - generic [ref=f13e490]:
+                    - text: "pages-build-deployment #22:"
+                    - generic [ref=f13e491]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e492] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e494] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e496]:
+                  - generic [ref=f13e497]:
+                    - generic "Jul 27, 2026, 14:34 GMT+9" [ref=f13e502]: 10 minutes ago
+                    - generic [ref=f13e503]:
+                      - img "Run duration" [ref=f13e504]
+                      - text: 1m 58s
+                  - group [ref=f13e507]:
+                    - img "Show options" [ref=f13e509] [cursor=pointer]
+              - generic [ref=f13e512]:
+                - generic [ref=f13e513]:
+                  - 'link "completed successfully: Run 2 of Deploy to GitHub Pages. Add auto-play mode with auto-steering for high scores, enabled by def…" [ref=f13e514] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30239981630
+                    - img "completed successfully:" [ref=f13e516]
+                    - generic [ref=f13e518]: Add auto-play mode with auto-steering for high scores, enabled by def…
+                  - generic [ref=f13e519]:
+                    - text: "Deploy to GitHub Pages #2:"
+                    - generic [ref=f13e520]:
+                      - text: Commit
+                      - link "9d5b1ea" [ref=f13e521] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/9d5b1ea9bf13f897d03aa22ca590be61219968b7
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e522] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e524] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e526]:
+                  - generic [ref=f13e527]:
+                    - generic "Jul 27, 2026, 14:31 GMT+9" [ref=f13e532]: 14 minutes ago
+                    - generic [ref=f13e533]:
+                      - img "Run duration" [ref=f13e534]
+                      - text: 1m 11s
+                  - group [ref=f13e537]:
+                    - img "Show options" [ref=f13e539] [cursor=pointer]
+              - generic [ref=f13e542]:
+                - generic [ref=f13e543]:
+                  - 'link "completed successfully: Run 21 of pages-build-deployment. pages build and deployment" [ref=f13e544] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30239981417
+                    - img "completed successfully:" [ref=f13e546]
+                    - generic [ref=f13e548]: pages build and deployment
+                  - generic [ref=f13e549]:
+                    - text: "pages-build-deployment #21:"
+                    - generic [ref=f13e550]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e551] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e553] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e555]:
+                  - generic [ref=f13e556]:
+                    - generic "Jul 27, 2026, 14:31 GMT+9" [ref=f13e561]: 14 minutes ago
+                    - generic [ref=f13e562]:
+                      - img "Run duration" [ref=f13e563]
+                      - text: 1m 15s
+                  - group [ref=f13e566]:
+                    - img "Show options" [ref=f13e568] [cursor=pointer]
+              - generic [ref=f13e571]:
+                - generic [ref=f13e572]:
+                  - 'link "completed successfully: Run 20 of pages-build-deployment. pages build and deployment" [ref=f13e573] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30236656501
+                    - img "completed successfully:" [ref=f13e575]
+                    - generic [ref=f13e577]: pages build and deployment
+                  - generic [ref=f13e578]:
+                    - text: "pages-build-deployment #20:"
+                    - generic [ref=f13e579]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e580] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e582] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e584]:
+                  - generic [ref=f13e585]:
+                    - generic "Jul 27, 2026, 13:17 GMT+9" [ref=f13e590]: Today at 13:17
+                    - generic [ref=f13e591]:
+                      - img "Run duration" [ref=f13e592]
+                      - text: 42s
+                  - group [ref=f13e595]:
+                    - img "Show options" [ref=f13e597] [cursor=pointer]
+              - generic [ref=f13e600]:
+                - generic [ref=f13e601]:
+                  - 'link "cancelled: Run 19 of pages-build-deployment. pages build and deployment" [ref=f13e602] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30236649307
+                    - img "cancelled:" [ref=f13e604]
+                    - generic [ref=f13e606]: pages build and deployment
+                  - generic [ref=f13e607]:
+                    - text: "pages-build-deployment #19:"
+                    - generic [ref=f13e608]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e609] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e611] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e613]:
+                  - generic [ref=f13e614]:
+                    - generic "Jul 27, 2026, 13:16 GMT+9" [ref=f13e619]: Today at 13:16
+                    - generic [ref=f13e620]:
+                      - img "Run duration" [ref=f13e621]
+                      - text: 12s
+                  - group [ref=f13e624]:
+                    - img "Show options" [ref=f13e626] [cursor=pointer]
+              - generic [ref=f13e629]:
+                - generic [ref=f13e630]:
+                  - 'link "cancelled: Run 18 of pages-build-deployment. pages build and deployment" [ref=f13e631] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30236643575
+                    - img "cancelled:" [ref=f13e633]
+                    - generic [ref=f13e635]: pages build and deployment
+                  - generic [ref=f13e636]:
+                    - text: "pages-build-deployment #18:"
+                    - generic [ref=f13e637]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e638] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e640] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e642]:
+                  - generic [ref=f13e643]:
+                    - generic "Jul 27, 2026, 13:16 GMT+9" [ref=f13e648]: Today at 13:16
+                    - generic [ref=f13e649]:
+                      - img "Run duration" [ref=f13e650]
+                      - text: 11s
+                  - group [ref=f13e653]:
+                    - img "Show options" [ref=f13e655] [cursor=pointer]
+              - generic [ref=f13e658]:
+                - generic [ref=f13e659]:
+                  - 'link "failed: Run 1 of Deploy to GitHub Pages. Add auto-play mode and GitHub Actions workflow for deployment" [ref=f13e660] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30236097999
+                    - img "failed:" [ref=f13e662]
+                    - generic [ref=f13e664]: Add auto-play mode and GitHub Actions workflow for deployment
+                  - generic [ref=f13e665]:
+                    - text: "Deploy to GitHub Pages #1:"
+                    - generic [ref=f13e666]:
+                      - text: Commit
+                      - link "2dc6ed9" [ref=f13e667] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid/PULSED-game/commit/2dc6ed9bb9d7e24fde01abe9a0c2b80b59327cc8
+                      - text: pushed by
+                      - link "hrt263jaj-droid" [ref=f13e668] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "master" [ref=f13e670] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/master
+                - generic [ref=f13e672]:
+                  - generic [ref=f13e673]:
+                    - generic "Jul 27, 2026, 13:04 GMT+9" [ref=f13e678]: Today at 13:04
+                    - generic [ref=f13e679]:
+                      - img "Run duration" [ref=f13e680]
+                      - text: 16s
+                  - group [ref=f13e683]:
+                    - img "Show options" [ref=f13e685] [cursor=pointer]
+              - generic [ref=f13e688]:
+                - generic [ref=f13e689]:
+                  - 'link "completed successfully: Run 17 of pages-build-deployment. pages build and deployment" [ref=f13e690] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235987208
+                    - img "completed successfully:" [ref=f13e692]
+                    - generic [ref=f13e694]: pages build and deployment
+                  - generic [ref=f13e695]:
+                    - text: "pages-build-deployment #17:"
+                    - generic [ref=f13e696]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e697] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e699] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e701]:
+                  - generic [ref=f13e702]:
+                    - generic "Jul 27, 2026, 13:01 GMT+9" [ref=f13e707]: Today at 13:01
+                    - generic [ref=f13e708]:
+                      - img "Run duration" [ref=f13e709]
+                      - text: 1m 23s
+                  - group [ref=f13e712]:
+                    - img "Show options" [ref=f13e714] [cursor=pointer]
+              - generic [ref=f13e717]:
+                - generic [ref=f13e718]:
+                  - 'link "cancelled: Run 16 of pages-build-deployment. pages build and deployment" [ref=f13e719] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235950722
+                    - img "cancelled:" [ref=f13e721]
+                    - generic [ref=f13e723]: pages build and deployment
+                  - generic [ref=f13e724]:
+                    - text: "pages-build-deployment #16:"
+                    - generic [ref=f13e725]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e726] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e728] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e730]:
+                  - generic [ref=f13e731]:
+                    - generic "Jul 27, 2026, 13:00 GMT+9" [ref=f13e736]: Today at 13:00
+                    - generic [ref=f13e737]:
+                      - img "Run duration" [ref=f13e738]
+                      - text: 56s
+                  - group [ref=f13e741]:
+                    - img "Show options" [ref=f13e743] [cursor=pointer]
+              - generic [ref=f13e746]:
+                - generic [ref=f13e747]:
+                  - 'link "cancelled: Run 15 of pages-build-deployment. pages build and deployment" [ref=f13e748] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235943588
+                    - img "cancelled:" [ref=f13e750]
+                    - generic [ref=f13e752]: pages build and deployment
+                  - generic [ref=f13e753]:
+                    - text: "pages-build-deployment #15:"
+                    - generic [ref=f13e754]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e755] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e757] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e759]:
+                  - generic [ref=f13e760]:
+                    - generic "Jul 27, 2026, 13:00 GMT+9" [ref=f13e765]: Today at 13:00
+                    - generic [ref=f13e766]:
+                      - img "Run duration" [ref=f13e767]
+                      - text: 12s
+                  - group [ref=f13e770]:
+                    - img "Show options" [ref=f13e772] [cursor=pointer]
+              - generic [ref=f13e775]:
+                - generic [ref=f13e776]:
+                  - 'link "cancelled: Run 14 of pages-build-deployment. pages build and deployment" [ref=f13e777] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235937173
+                    - img "cancelled:" [ref=f13e779]
+                    - generic [ref=f13e781]: pages build and deployment
+                  - generic [ref=f13e782]:
+                    - text: "pages-build-deployment #14:"
+                    - generic [ref=f13e783]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e784] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e786] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e788]:
+                  - generic [ref=f13e789]:
+                    - generic "Jul 27, 2026, 13:00 GMT+9" [ref=f13e794]: Today at 13:00
+                    - generic [ref=f13e795]:
+                      - img "Run duration" [ref=f13e796]
+                      - text: 13s
+                  - group [ref=f13e799]:
+                    - img "Show options" [ref=f13e801] [cursor=pointer]
+              - generic [ref=f13e804]:
+                - generic [ref=f13e805]:
+                  - 'link "cancelled: Run 13 of pages-build-deployment. pages build and deployment" [ref=f13e806] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235930372
+                    - img "cancelled:" [ref=f13e808]
+                    - generic [ref=f13e810]: pages build and deployment
+                  - generic [ref=f13e811]:
+                    - text: "pages-build-deployment #13:"
+                    - generic [ref=f13e812]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e813] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e815] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e817]:
+                  - generic [ref=f13e818]:
+                    - generic "Jul 27, 2026, 13:00 GMT+9" [ref=f13e823]: Today at 13:00
+                    - generic [ref=f13e824]:
+                      - img "Run duration" [ref=f13e825]
+                      - text: 14s
+                  - group [ref=f13e828]:
+                    - img "Show options" [ref=f13e830] [cursor=pointer]
+              - generic [ref=f13e833]:
+                - generic [ref=f13e834]:
+                  - 'link "cancelled: Run 12 of pages-build-deployment. pages build and deployment" [ref=f13e835] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235923329
+                    - img "cancelled:" [ref=f13e837]
+                    - generic [ref=f13e839]: pages build and deployment
+                  - generic [ref=f13e840]:
+                    - text: "pages-build-deployment #12:"
+                    - generic [ref=f13e841]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e842] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e844] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e846]:
+                  - generic [ref=f13e847]:
+                    - generic "Jul 27, 2026, 13:00 GMT+9" [ref=f13e852]: Today at 13:00
+                    - generic [ref=f13e853]:
+                      - img "Run duration" [ref=f13e854]
+                      - text: 10s
+                  - group [ref=f13e857]:
+                    - img "Show options" [ref=f13e859] [cursor=pointer]
+              - generic [ref=f13e862]:
+                - generic [ref=f13e863]:
+                  - 'link "cancelled: Run 11 of pages-build-deployment. pages build and deployment" [ref=f13e864] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235917516
+                    - img "cancelled:" [ref=f13e866]
+                    - generic [ref=f13e868]: pages build and deployment
+                  - generic [ref=f13e869]:
+                    - text: "pages-build-deployment #11:"
+                    - generic [ref=f13e870]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e871] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e873] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e875]:
+                  - generic [ref=f13e876]:
+                    - generic "Jul 27, 2026, 12:59 GMT+9" [ref=f13e881]: Today at 12:59
+                    - generic [ref=f13e882]:
+                      - img "Run duration" [ref=f13e883]
+                      - text: 12s
+                  - group [ref=f13e886]:
+                    - img "Show options" [ref=f13e888] [cursor=pointer]
+              - generic [ref=f13e891]:
+                - generic [ref=f13e892]:
+                  - 'link "cancelled: Run 10 of pages-build-deployment. pages build and deployment" [ref=f13e893] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235912176
+                    - img "cancelled:" [ref=f13e895]
+                    - generic [ref=f13e897]: pages build and deployment
+                  - generic [ref=f13e898]:
+                    - text: "pages-build-deployment #10:"
+                    - generic [ref=f13e899]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e900] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e902] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e904]:
+                  - generic [ref=f13e905]:
+                    - generic "Jul 27, 2026, 12:59 GMT+9" [ref=f13e910]: Today at 12:59
+                    - generic [ref=f13e911]:
+                      - img "Run duration" [ref=f13e912]
+                      - text: 13s
+                  - group [ref=f13e915]:
+                    - img "Show options" [ref=f13e917] [cursor=pointer]
+              - generic [ref=f13e920]:
+                - generic [ref=f13e921]:
+                  - 'link "cancelled: Run 9 of pages-build-deployment. pages build and deployment" [ref=f13e922] [cursor=pointer]':
+                    - /url: /hrt263jaj-droid/PULSED-game/actions/runs/30235906119
+                    - img "cancelled:" [ref=f13e924]
+                    - generic [ref=f13e926]: pages build and deployment
+                  - generic [ref=f13e927]:
+                    - text: "pages-build-deployment #9:"
+                    - generic [ref=f13e928]:
+                      - text: by
+                      - link "hrt263jaj-droid" [ref=f13e929] [cursor=pointer]:
+                        - /url: /hrt263jaj-droid
+                - link "gh-pages" [ref=f13e931] [cursor=pointer]:
+                  - /url: /hrt263jaj-droid/PULSED-game/tree/refs/heads/gh-pages
+                - generic [ref=f13e933]:
+                  - generic [ref=f13e934]:
+                    - generic "Jul 27, 2026, 12:59 GMT+9" [ref=f13e939]: Today at 12:59
+                    - generic [ref=f13e940]:
+                      - img "Run duration" [ref=f13e941]
+                      - text: 13s
+                  - group [ref=f13e944]:
+                    - img "Show options" [ref=f13e946] [cursor=pointer]
+          - navigation "Pagination" [ref=f13e950]:
+            - generic "Previous page" [ref=f13e951]: Previous
+            - emphasis [ref=f13e952] [cursor=pointer]: "1"
+            - link "Page 2" [ref=f13e953] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/actions?page=2
+              - text: "2"
+            - link "Next page" [ref=f13e954] [cursor=pointer]:
+              - /url: /hrt263jaj-droid/PULSED-game/actions?page=2
+              - text: Next
