@@ -171,11 +171,15 @@ class Game {
         this.skipIntro = v
         saveSkipIntro(v)
       },
+      onAutoPlayToggle: (v) => {
+        this.autoPlay = v
+      },
     })
     this.ui.setSelectedTier(this.tierName)
     this.ui.setSensitivity(this.sensitivity)
     this.ui.setDifficulty(this.difficultyName)
     this.ui.setSkipIntro(this.skipIntro)
+    this.ui.setAutoPlay(this.autoPlay)
   }
 
   _initInput() {
@@ -837,41 +841,24 @@ class Game {
     let bestScore = -Infinity
     let foundTarget = false
 
-    for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 10; i++) {
+    for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 15; i++) {
       const item = items[i]
       if (item.resolved) continue
       if (item.t > lookAheadTime) break
 
-      // Calculate how reachable this block is
-      const timeUntilBlock = item.t - songTime
-      if (timeUntilBlock <= 0) continue
+      // Calculate score for this target: prioritize collectibles, avoid hazards
+      // Score based on strength and proximity to current position
+      const timeUntil = item.t - songTime
+      const distance = Math.abs(run.vessel.offset - item.offset)
+      const urgency = 1 / Math.max(0.1, timeUntil)
 
-      // Max distance vessel can travel in that time (using max steering velocity)
-      const maxTravel = 42 * timeUntilBlock // MAX_V from vessel.js steer()
-
-      // Check if we can reach this block's lane
-      const distanceToLane = Math.abs(item.offset - run.vessel.offset)
-
-      // Score: prefer collectibles, avoid hazards, prefer closer/easier targets
       let score = 0
       if (item.hazard) {
-        // Strongly avoid hazards - negative score
-        score = -1000 / (distanceToLane + 0.1)
-        // If we're already close to a hazard, prioritize moving away
-        if (distanceToLane < COLLECT_RADIUS * 2) {
-          score -= 5000
-        }
+        // Avoid hazards - negative score based on how close we are to hitting them
+        score = -urgency * 10 * (1 - distance / (limit * 2))
       } else {
-        // Positive score for collectibles based on strength and reachability
-        const reachable = distanceToLane <= maxTravel
-        if (reachable) {
-          score = item.strength * 100 / (distanceToLane + 0.5)
-          // Bonus for blocks that are aligned with current position (less steering needed)
-          score += (1 - distanceToLane / (run.track.halfWidth * 2)) * 20
-        } else {
-          // Can't reach, but still consider for planning
-          score = item.strength * 10 / (distanceToLane + 1)
-        }
+        // Collect collectibles - positive score based on strength and urgency
+        score = item.strength * urgency * (1 + (1 - distance / limit))
       }
 
       if (score > bestScore) {
@@ -881,22 +868,41 @@ class Game {
       }
     }
 
-    // Also consider staying in current lane if no good targets
-    if (!foundTarget || bestScore < 10) {
-      // Small bias toward center lane when nothing urgent
-      bestTarget = run.vessel.offset * 0.5
+    // If no immediate targets, look further ahead for upcoming collectibles
+    if (!foundTarget) {
+      for (let i = run.blocks.cursor; i < items.length && i < run.blocks.cursor + 30; i++) {
+        const item = items[i]
+        if (item.resolved || item.hazard) continue
+        if (item.t > songTime + this.autoPlayLookAhead * 3) break
+
+        const timeUntil = item.t - songTime
+        const distance = Math.abs(run.vessel.offset - item.offset)
+        const score = item.strength / Math.max(0.1, timeUntil) * (1 - distance / limit * 0.5)
+
+        if (score > bestScore) {
+          bestScore = score
+          bestTarget = item.offset
+          foundTarget = true
+        }
+      }
     }
 
-    // Smooth the target offset
-    this.autoPlayTargetOffset += (bestTarget - this.autoPlayTargetOffset) * this.autoPlaySmooth
+    // If still no target found, gently return to center
+    if (!foundTarget) {
+      bestTarget = 0
+    }
 
-    // Calculate steering delta to move toward target
-    const targetDelta = this.autoPlayTargetOffset - run.vessel.offset
-    const maxDelta = 42 * dt // Match vessel's max velocity
-    const clampedDelta = THREE.MathUtils.clamp(targetDelta, -maxDelta, maxDelta)
+    // Smoothly interpolate towards target
+    const targetDiff = bestTarget - run.vessel.offset
+    this.autoPlayTargetOffset += (targetDiff - this.autoPlayTargetOffset) * this.autoPlaySmooth
 
-    // Apply steering using moveBy (direct positional control like mouse)
-    run.vessel.moveBy(clampedDelta, dt, limit)
+    // Apply steering using moveBy (direct position control like mouse)
+    const maxStep = limit * 2 * dt // max units per frame
+    const clampedStep = THREE.MathUtils.clamp(this.autoPlayTargetOffset, -maxStep, maxStep)
+
+    if (Math.abs(clampedStep) > 0.01) {
+      run.vessel.moveBy(clampedStep, dt, limit)
+    }
   }
 
   _loop() {

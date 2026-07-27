@@ -7,6 +7,8 @@ index.htmlのゲームを変更点で変更する。
 自動プレイモードをデフォルトにする
 
 
+
+
 現在使える全てのMCP serverを確認する。
 すでに使用可能なMCP serverのchrome-devtools-mcpを使って以下の内容を行う。
 

@@ -109,6 +109,10 @@ export class UI {
       this.handlers.onSkipIntroToggle(e.target.checked)
     })
 
+    $('toggle-autoplay').addEventListener('change', (e) => {
+      this.handlers.onAutoPlayToggle(e.target.checked)
+    })
+
     const sens = $('mouse-sens')
     sens.addEventListener('input', (e) => {
       const raw = Number(e.target.value)
@@ -185,6 +189,10 @@ export class UI {
 
   setSkipIntro(value) {
     $('toggle-skip-intro').checked = value
+  }
+
+  setAutoPlay(value) {
+    $('toggle-autoplay').checked = value
   }
 
   setSelectedTier(key) {
