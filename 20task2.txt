@@ -1,0 +1,25 @@
+index.htmlのゲームを変更点で変更する。
+
+変更点:
+
+自動でプレイされ鑑賞できる自動プレイモードを追加する
+自動プレイモードで自動でマウス動かし自動で高得点になるようにする
+自動プレイモードをデフォルトにする
+
+
+現在使える全てのMCP serverを確認する。
+すでに使用可能なMCP serverのchrome-devtools-mcpを使って以下の内容を行う。
+
+内容:
+
+chrome-devtools-mcp - navigate_page (MCP)を使う。
+
+https://github.com/hrt263jaj-droid/PULSED-game/tree/gh-pagesを開く。
+
+github.com/hrt263jaj-droid/PULSED-game/に変更したindex.htmlのゲームを公開する。
+
+github.com/hrt263jaj-droid/PULSED-game/のゲームをhttps://hrt263jaj-droid.github.io/PULSED-game/に公開する。
+
+https://hrt263jaj-droid.github.io/PULSED-game/のゲームを「TRY─DEMO─TRACK」をクリックして動作確認する。
+
+

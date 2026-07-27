@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PULSED</title>
+    <base href="/PULSED-game/">
+    <script type="module" crossorigin src="/src/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/src/style.css">
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <!-- TITLE ------------------------------------------------------------ -->
+    <section id="screen-title" class="screen active">
+      <div class="title-block">
+        <h1 class="logo">PULSED</h1>
+        <p class="tagline">Your music becomes the track</p>
+      </div>
+
+      <div id="dropzone" class="dropzone">
+        <div class="dropzone-inner">
+          <div class="drop-icon">&#9835;</div>
+          <p class="drop-main">Drop an audio file anywhere</p>
+          <p class="drop-sub">or <button id="browse" class="link-btn" type="button">browse your files</button></p>
+          <p class="drop-formats">mp3 &middot; wav &middot; ogg &middot; flac &middot; m4a</p>
+        </div>
+      </div>
+      <input id="file-input" type="file" accept="audio/*,.mp3,.wav,.ogg,.flac,.m4a,.aac,.opus" hidden />
+
+      <div class="difficulty">
+        <span class="hud-label">Difficulty</span>
+        <div id="difficulty-list" class="difficulty-list"></div>
+        <p id="difficulty-note" class="diff-note"></p>
+      </div>
+
+      <div class="title-footer">
+        <button id="try-demo" class="ghost-btn" type="button">Try demo track</button>
+        <button id="open-settings" class="ghost-btn" type="button">Graphics</button>
+        <span class="hint"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> or <kbd>A</kbd> <kbd>D</kbd> to steer</span>
+      </div>
+
+      <p id="error" class="error" hidden></p>
+    </section>
+
+    <!-- LOADING ---------------------------------------------------------- -->
+    <section id="screen-loading" class="screen">
+      <div class="loading-block">
+        <p id="loading-stage" class="loading-stage">Reading file</p>
+        <h2 id="loading-song" class="loading-song"></h2>
+        <canvas id="loading-viz" class="loading-viz" width="900" height="150"></canvas>
+        <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+        <p id="loading-detail" class="loading-detail">&nbsp;</p>
+      </div>
+    </section>
+
+    <!-- HUD -------------------------------------------------------------- -->
+    <section id="hud" class="hud" hidden>
+      <!-- Everything you read mid-run lives in one centred column, so scoring
+           never pulls your eyes away from the road. -->
+      <div class="hud-top">
+        <div class="hud-song">
+          <span id="hud-song-name" class="hud-song-name"></span>
+          <div class="song-progress"><div id="song-progress-bar" class="song-progress-bar"></div></div>
+          <div class="hud-stats">
+            <div class="stat-block">
+              <span class="hud-label">Score</span>
+              <span id="hud-score-value" class="hud-value">0</span>
+            </div>
+            <div class="stat-block hud-combo">
+              <span class="hud-label">Combo</span>
+              <span id="hud-combo-value" class="hud-value">&times;1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-bottom">
+        <div class="overdrive">
+          <span class="hud-label">Overdrive</span>
+          <div class="overdrive-track"><div id="overdrive-fill" class="overdrive-fill"></div></div>
+          <span id="overdrive-ready" class="overdrive-ready">Ready &mdash; <kbd>Space</kbd> or click</span>
+        </div>
+        <div class="speed">
+          <span id="hud-speed-value" class="speed-value">0</span>
+          <span class="hud-label">km/h</span>
+        </div>
+      </div>
+
+      <div id="combo-flash" class="combo-flash"></div>
+      <p id="mouse-hint" class="mouse-hint">Click to take mouse control</p>
+    </section>
+
+    <!-- PAUSE ------------------------------------------------------------ -->
+    <section id="screen-pause" class="screen">
+      <div class="panel">
+        <h2>Paused</h2>
+        <div class="panel-buttons">
+          <button id="resume" class="primary-btn" type="button">Resume</button>
+          <button id="restart" class="ghost-btn" type="button">Restart</button>
+          <button id="pause-settings" class="ghost-btn" type="button">Graphics</button>
+          <button id="quit" class="ghost-btn" type="button">New song</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS ---------------------------------------------------------- -->
+    <section id="screen-results" class="screen">
+      <div class="panel wide">
+        <p class="results-eyebrow">Run complete</p>
+        <h2 id="results-song"></h2>
+        <div class="results-grid">
+          <div class="stat"><span class="hud-label">Score</span><span id="results-score" class="stat-value">0</span></div>
+          <div class="stat"><span class="hud-label">Best combo</span><span id="results-combo" class="stat-value">0</span></div>
+          <div class="stat"><span class="hud-label">Collected</span><span id="results-collected" class="stat-value">0</span></div>
+          <div class="stat"><span class="hud-label">Accuracy</span><span id="results-accuracy" class="stat-value">0%</span></div>
+        </div>
+        <canvas id="results-graph" class="results-graph" width="1000" height="180"></canvas>
+        <p class="results-caption">Song energy &mdash; brighter where you scored</p>
+        <div class="panel-buttons">
+          <button id="results-again" class="primary-btn" type="button">Race again</button>
+          <button id="results-new" class="ghost-btn" type="button">New song</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS --------------------------------------------------------- -->
+    <section id="screen-settings" class="screen">
+      <div class="panel">
+        <h2>Graphics</h2>
+        <div id="tier-list" class="tier-list"></div>
+        <label class="slider-row">
+          <span>Mouse sensitivity</span>
+          <input id="mouse-sens" type="range" min="10" max="110" step="1" value="35" />
+          <span id="mouse-sens-value" class="slider-value">35</span>
+        </label>
+        <label class="toggle-row">
+          <input id="toggle-shake" type="checkbox" checked />
+          <span>Camera shake</span>
+        </label>
+        <label class="toggle-row">
+          <input id="toggle-skip-intro" type="checkbox" checked />
+          <span>Skip quiet intros</span>
+        </label>
+        <p class="settings-note">Antialiasing changes apply after a page reload.</p>
+        <div class="panel-buttons">
+          <button id="settings-close" class="primary-btn" type="button">Done</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="drop-overlay" class="drop-overlay"><span>Release to load</span></div>
+
+  </body>
+</html>
