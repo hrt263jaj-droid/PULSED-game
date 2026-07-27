@@ -14,12 +14,14 @@ index.htmlのゲームを変更点で変更する。
 
 chrome-devtools-mcp - navigate_page (MCP)を使う。
 
-https://github.com/hrt263jaj-droid/PULSED-game/tree/gh-pagesを開く。
+https://github.com/hrt263jaj-droid/PULSED-game/を開く。
 
-github.com/hrt263jaj-droid/PULSED-game/に変更したindex.htmlのゲームを公開する。
+https://github.com/hrt263jaj-droid/PULSED-game/に変更したdist/index.htmlのゲームを公開する。
 
-github.com/hrt263jaj-droid/PULSED-game/のゲームをhttps://hrt263jaj-droid.github.io/PULSED-game/に公開する。
+https://github.com/hrt263jaj-droid/PULSED-game/にdist/index.htmlのゲームが動作する最低限のファイルだけを公開する。
 
-https://hrt263jaj-droid.github.io/PULSED-game/のゲームを「TRY─DEMO─TRACK」をクリックして動作確認する。
+https://github.com/hrt263jaj-droid/PULSED-game/のゲームをhttps://hrt263jaj-droid.github.io/PULSED-game/dist/に公開する。
+
+https://hrt263jaj-droid.github.io/PULSED-game/dist/のゲームを「TRY─DEMO─TRACK」をクリックして動作確認する。
 
 
